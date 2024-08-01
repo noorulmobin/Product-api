@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Cards</title>
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .card h1 {
+        font-size: 24px;
+        margin: 16px 0;
+        color: #333;
+      }
+
+      .card p {
+        font-size: 16px;
+        color: #666;
+        margin: 8px 16px;
+      }
+
+      .card .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin: 16px 0;
+      }
+
+      .search-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .search-container input {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="productDropdown" onchange="Category(event)">
+      <option value="">Select a product...</option>
+      <option value="beauty">Beauty</option>
+      <option value="fragrances">Fragrances</option>
+      <option value="furniture">Furniture</option>
+      <option value="groceries">Groceries</option>
+    </select>
+
+    <div class="search-container">
+      <input type="text" id="searchProduct" placeholder="Search" />
+      <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
